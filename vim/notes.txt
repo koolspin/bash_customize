@@ -1,0 +1,8 @@
+Require the following plugsin to work:
+taglist
+Nerd commenter
+mru
+
+For the ActionScript syntax file:
+Find your filetype.vim and change the existing association with the Atlas filetype.
+

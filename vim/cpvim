@@ -1,0 +1,5 @@
+#!/bin/sh
+cp .vimrc ~/
+mkdir ~/.vim
+cp -R vimfiles/* ~/.vim
+
