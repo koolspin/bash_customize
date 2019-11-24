@@ -1,0 +1,109 @@
+" How many lines VIM should remember
+set history=700
+
+" Enable filetype plugin
+filetype plugin on
+filetype indent on
+
+" Disable annoying auto commenting
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Disable compatibility mode
+set nocompatible
+
+" Auto read when a file is changed from outside
+set autoread
+
+" UI stuff
+" Turn on wild menu?
+set wildmenu
+
+" Always show current position
+set ruler
+
+" Always show hybrid linenumbers
+set number relativenumber
+
+" The commandbar height
+set cmdheight=2
+
+" Change buffer without saving
+set hid
+
+" Ignore case when searching
+set ignorecase
+set smartcase
+
+" Highlight search things
+set hlsearch
+
+" Make search act like search in modern browsers
+set incsearch
+
+" Don't redraw when running macros
+set nolazyredraw
+set ttyfast
+
+" Set magic on for regex?
+set magic
+
+" Show matching brackets when text indicator is over them
+set showmatch
+
+" How many .1 s to blink
+set mat=2
+
+" No sound on errors
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+
+" Colors and fonts
+syntax enable
+set encoding=utf8
+:colorscheme zenburn
+
+" Backup and such
+set nobackup
+set nowb
+set noswapfile
+
+" tabs
+set expandtab
+set shiftwidth=4
+set tabstop=4
+
+" auto indent
+set ai
+
+" smart indent
+set si
+
+" wrap lines
+set wrap
+
+" Backspace handling
+set backspace=indent,eol,start
+
+" Selection
+noremap <leader>w yiw
+noremap <leader><S-w> viw"0p
+noremap <leader>s yi"
+noremap <leader><S-s> vi""0p
+noremap <leader>b viBy
+noremap <leader><S-b> viB"0p
+noremap <leader>z "0P
+noremap <leader>x "0p
+noremap <leader>d Y"0p
+noremap <leader>D Y"0P
+noremap <leader>] <C-w>s
+noremap <leader>[ <C-w>v
+noremap <leader>\ <C-w>w
+noremap <leader>` <C-w>c
+noremap <leader><F1> :Sex<CR>
+noremap <leader><F2> :Ex<CR>
+
+" Actionscript syntax
+au BufRead,BufNewFile *.as set filetype=ActionScript
+" Actionscript syntax
+au BufRead,BufNewFile *.swift set filetype=swift
+
